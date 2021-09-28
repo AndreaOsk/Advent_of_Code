@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title> Day One</title>
+</head>
+
+<style>
+   
+   .snow-app {
+      width: 220px;
+      margin: auto;
+   }
+
+   .string {
+      padding: 100px;
+      font-size: 40px;
+      background-color: tomato;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+   }
+
+   h1 {
+      font-family: monospace;
+      font-size: 48px;
+      text-align: center;
+   }
+
+   h2 {
+      font-family: monospace;
+      text-align: center;
+      padding-top: 30px ;
+   }
+
+</style>
+
+<body class="snow-app">
+   <h1>Floor <br>Calculator</h1>
+
+   <div class="snow-app">
+      <h2>Up Floors</h2>
+      <p class="string" id='up'></p>
+      <h2>Down Floors</h2>
+      <p class="string" id='down'></p>
+      <h2>End Floor</h2>
+      <p class="string" id='end'></p>
+   </div>
+</body>
+
+<script>
+
+
+   let up = 0;
+   let down = 0; 
+   
+   let input = '(((())))()(((((((';
+   // let string = "";
+      for (let x of input){
+      // string += x;
+      if (x === '(' ) {up = up + 1};
+      if (x === ')') {down = down + 1}
+      }
+
+   let end = up - down;
+
+   console.log(end);
+
+   document.getElementById("up").innerHTML = up;
+   document.getElementById("down").innerHTML = down;
+   document.getElementById("end").innerHTML = end;
+</script>
+
+
+</html>
